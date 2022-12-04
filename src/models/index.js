@@ -9,8 +9,8 @@ const ModelInterface = require("./ModelInterface");
 // 'postgres://localhost:5432/api-app'
 // 'postgres://username:password@localhost:5432/api-app'  <-- if you have a username and password
 // use ternary operator to setup sqlite for testing
-const DATABASE_URL =
-  process.env.NODE_ENV === "test" ? "sqlite:memory" : process.env.DATABASE_URL;
+
+const DATABASE_URL = "sqlite:memory:";
 
 console.log(DATABASE_URL);
 

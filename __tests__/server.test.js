@@ -15,17 +15,17 @@ afterAll(async () => {
 });
 
 describe("Testing the server", () => {
-  it("should respond with a 404 on an invalid route", async () => {
+  it("responds with a 404 on an invalid route", async () => {
     const response = await request.get("/badroute");
     expect(response.status).toEqual(404);
   });
 
-  it("should respond with a 404 on an invalid method", async () => {
+  it("responds with a 404 on an invalid method", async () => {
     const response = await request.post("/");
     expect(response.status).toEqual(404);
   });
 
-  it("should create a new record using POST", async () => {
+  it("creates a new record using POST", async () => {
     const response = await request.post("/food").send({
       name: "pizza",
       calories: 400,
@@ -35,19 +35,19 @@ describe("Testing the server", () => {
     expect(response.body.name).toEqual("pizza");
   });
 
-  it("should read a list of records using GET", async () => {
+  it("reads a list of records using GET", async () => {
     const response = await request.get("/food");
     expect(response.status).toEqual(200);
     expect(response.body.length).toEqual(1);
   });
 
-  it("should read a record using GET", async () => {
+  it("reads a record using GET", async () => {
     const response = await request.get("/food/1");
     expect(response.status).toEqual(200);
     expect(response.body.name).toEqual("pizza");
   });
 
-  it("should update a record using PUT", async () => {
+  it("updates a record using PUT", async () => {
     const response = await request.put("/food/1").send({
       name: "pizza",
       calories: 600,
@@ -58,7 +58,7 @@ describe("Testing the server", () => {
     expect(response.body.calories).toEqual(600);
   });
 
-  it("should destroy a record using DELETE", async () => {
+  it("destroys a record using DELETE", async () => {
     const response = await request.delete("/food/1");
     expect(response.status).toEqual(204);
     expect(response.text).toEqual("");

@@ -6,7 +6,7 @@
 
 ### Problem Domain
 
-- Build a REST API using Express, by creating a proper series of endpoints that perform CRUD operations on a database, including server modularization, use of middleware, a model interface, and tests using the REST standard.
+- Build a REST API using Express, by creating a proper series of endpoints that perform CRUD operations on a database, including server modularization, use of middleware, a model interface, and tests using the standard.
 
 ### Links and Resources
 
