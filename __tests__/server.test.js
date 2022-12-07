@@ -14,8 +14,8 @@ afterAll(async () => {
   await sequelizeDatabase.drop();
 });
 
-describe("Testing the server", () => {
-  it("responds with a 404 on an invalid route", async () => {
+describe("testing server", () => {
+  it.only("responds with a 404 on an invalid route", async () => {
     const response = await request.get("/badroute");
     expect(response.status).toEqual(404);
   });
