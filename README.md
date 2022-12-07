@@ -55,3 +55,4 @@ Tests
     - Destroy a record using DELETE
 
 UML
+![alt](./assets/401-class-3.png)
